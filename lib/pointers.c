@@ -8,15 +8,19 @@
 int bubble_sort(int *target, int count)
 {
     // aqui su implementación.
-    for (int i = 0; i < count; ++i)
+    int i = 0;
+    int pivote = 0 ;
+    while(i < count)
     {
-        int pivote;
-
-        if (*(target+i) > *(target+i+1))
-        {
-            pivote = *(target+i);
-            *(target+i) = *(target+i+1);
-            *(target+i+1) = pivote;
+        if (*(target + i) > *(target + i + 1)) {
+            pivote = *(target + i);
+            *(target + i) = *(target + i + 1);
+            *(target + i + 1) = pivote;
+        }
+        i++;
+        if((i+1) == count){
+            count--;
+            i = 0;
         }
     }
   return 0;
