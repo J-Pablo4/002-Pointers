@@ -30,7 +30,26 @@ int bubble_sort(int *target, int count)
 
 void insertion_sort(int *collection, int count)
 {
-
+    int valor_insert;
+    int j;
+    for (int i = 1; i < count; ++i)
+    {
+        valor_insert = *(collection + i);
+        j = i;
+        while (j > 0)
+        {
+            j--;
+            if(valor_insert <= *(collection+j))
+            {
+                *(collection+j+1) = *(collection+j);
+            } else
+            {
+                j++;
+                break;
+            }
+        }
+        *(collection+j) = valor_insert;
+    }
 }
 
 void reverse(int *collection, int count)
