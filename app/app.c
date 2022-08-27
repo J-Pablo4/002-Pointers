@@ -2,14 +2,9 @@
 
 int main(void)
 {
-    int arreglo[10] = {18,21,3,4,58,6, 9,7 ,9,10};
+    int arreglo[10] = {1,1,3,4,4,4, 9,9,9,9};
     int count = 10;
     int *mi_apuntador = arreglo;
-    reverse(mi_apuntador,count);
-
-    for (int i = 0; i < count; ++i) {
-        printf("%d, ", *(mi_apuntador+i));
-    }
-
+    printf("%d",calulate_frequency(mi_apuntador,count, 19));
   return 0;
 }
