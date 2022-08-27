@@ -54,7 +54,14 @@ void insertion_sort(int *collection, int count)
 
 void reverse(int *collection, int count)
 {
-
+    int valor_intercambiable;
+    for (int i = 0; i < count; ++i)
+    {
+        count--;
+        valor_intercambiable = *(collection+count);
+        *(collection+count) = *(collection+i);
+        *(collection+i) = valor_intercambiable;
+    }
 }
 
 int calulate_frequency(int *collection, int count, int target)
